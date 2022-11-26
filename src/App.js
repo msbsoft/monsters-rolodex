@@ -49,13 +49,7 @@ function App() {
 
   return (
     <div className="App">
-      <CardList>
-        {
-          monsters?.map(monster => (
-            <h2 key={monster.id}>{monster.name}</h2>
-          ))
-        }
-      </CardList>        
+      <CardList monsters={monsters} />
     </div>
   );
 }

@@ -5,7 +5,11 @@ const CardList = (props) =>{
 
     return (
         <div className="card-list">
-            {props.children.map(i => <div className="card">{i}</div>)}
+            {props.monsters.map(monster => (
+                <div className="card" key={monster.id}>
+                    {monster.name}
+                </div>
+            ))}
         </div>
     )
 }
