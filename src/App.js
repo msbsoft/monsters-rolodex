@@ -7,43 +7,53 @@ function App() {
   const [monsters, setMonsters] = useState([
     {
         id: 1,
-        name: "Leanne Graham"
+        name: "Leanne Graham",
+        email: "Leanne.Graham@monsters.com"
     },
     {
         id: 2,
-        name: "Ervin Howell"
+        name: "Ervin Howell",
+        email: "Ervin.Howell@monsters.com"
     },
     {
         id: 3,
-        name: "Clementine Bauch"
+        name: "Clementine Bauch",
+        email: "Clementine.Bauch@monsters.com"
     },
     {
         id: 4,
-        name: "Patricia Lebsack"
+        name: "Patricia Lebsack",
+        email: "Patricia.Lebsack@monsters.com"
     },
     {
         id: 5,
-        name: "Chelsey Dietrich"
+        name: "Chelsey Dietrich",
+        email: "Chelsey.Dietrich@monsters.com"
     },
     {
         id: 6,
-        name: "Mrs. Dennis Schulist"
+        name: "Mrs. Dennis Schulist",
+        email: "Dennis.Schulist@monsters.com"
     },
     {
       id: 7,
-      name: "Kurtis Weissnant"
+      name: "Kurtis Weissnant",
+      email: "Kurtis.Weissnant@monsters.com"
     },
     {
       id: 8,
-      name: "Nicholas Runolfsdottir"
+      name: "Nicholas Runolfsdottir",
+      email: "Nicholas.Runolfsdottir@monsters.com"
     },
     {
       id: 9,
-      name: "Glenna Reichert"
+      name: "Glenna Reichert",
+      email: "Glenna.Reichert@monsters.com"
     },
     {
       id: 10,
-      name: "Clentina DuBuque"
+      name: "Clentina DuBuque",
+      email: "Clentina.DuBuque@monsters.com"
     }
   ])
 
