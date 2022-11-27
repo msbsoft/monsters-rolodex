@@ -4,28 +4,31 @@ import './App.style.css';
 import CardList from '../card-list/card-list-component';
 
 function App() {
-  const [monsters, setMonsters] = useState([])
-  const [filteredMonsters, setFilteredMonsters] = useState([]);
+  const [state, setState] = useState({
+    monsters: [],
+    searchField: ""
+  })
 
   useEffect(() => {
     async function getMonsters(){
-      let monsters = await (await axios.get(`https://jsonplaceholder.typicode.com/users`)).data
-      setMonsters(monsters)
-      setFilteredMonsters(monsters);    
+      let monsters = await (await axios.get(`https://jsonplaceholder.typicode.com/users`))
+      console.log(monsters)
+      setState((prev) => ({...prev, monsters:monsters.data}))
     }
     getMonsters()
   }, [])
 
   const handleSearch = (e) => {    
-    if (!e.target.value) {
-      setFilteredMonsters(monsters)
-    }  
-    
-    let filteredMonsters = monsters.filter((monster) => 
-      monster.name.toLowerCase().includes(e.target.value.toLowerCase())) 
-    
-    setFilteredMonsters(filteredMonsters)
+      setState(prev => ({ ...prev, searchField: e.target.value}))
   }
+
+  /*
+  Note: when the state changes, component will be re-rendered.
+  */
+  const {monsters, searchField} = state
+  console.log(searchField)
+  const filteredMonsters = monsters.filter((monster) => 
+     monster.name.toLowerCase().includes(searchField.toLowerCase())) 
 
   return (
     <div className="App">    
