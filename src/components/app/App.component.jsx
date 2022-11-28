@@ -27,12 +27,12 @@ function App() {
   Note: when the state changes, component will be re-rendered.
   */
   const {monsters, searchField} = state
-  console.log(searchField)
   const filteredMonsters = monsters.filter((monster) => 
      monster.name.toLowerCase().includes(searchField.toLowerCase())) 
 
   return (
     <div className="App"> 
+      <h1>Monsters Rolodex</h1>
       <SearchBox placeHolder="Search Monsters" handleSearch={handleSearch}/>   
       <CardList monsters={filteredMonsters} />
     </div>
